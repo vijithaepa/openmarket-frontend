@@ -1,0 +1,19 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches: [release]
+
+# Amplify auto-deploys on push to the release branch.
+# This workflow is a no-op placeholder — Amplify handles
+# build, CDN invalidation, and HTTPS automatically.
+#
+# If you ever need a manual S3/CloudFront fallback, add steps here.
+
+jobs:
+  notify:
+    name: Amplify auto-deploy triggered
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm
+        run: echo "Push to release branch received. Amplify will handle the deployment."
